@@ -1,3 +1,3 @@
 bin_PROGRAMS = piglatin
 
-piglatin_SOURCES = main.cpp
+piglatin_SOURCES = main.cpp PigLatin.cpp
