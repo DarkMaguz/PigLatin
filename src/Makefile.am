@@ -1,6 +1,3 @@
-bin_PROGRAMS = cpptemplate
+bin_PROGRAMS = piglatin
 
-cpptemplate_SOURCES = main.cpp
-#mastermind_CPPFLAGS
-#mastermind_LDADD
-
+piglatin_SOURCES = main.cpp

@@ -93,4 +93,5 @@ Makefile
 *.pdb
 
 *.deps
-src/cpptemplate
+src/piglatin
+test/test
