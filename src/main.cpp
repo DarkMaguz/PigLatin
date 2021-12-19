@@ -5,6 +5,14 @@
 
 int main(int argc, char **argv)
 {
+	if (argc != 2)
+	{
+		std::cout << "Usage: piglatin FILE" << std::endl;
+		std::cout << "Pig Latin is a language obfuscation game/tool." << std::endl;
+		std::cout << std::endl << "Transform and obfuscate a plain text file" << std::endl;
+		std::cout << "Takes one argument FILE and outputs FILE.pig regardless of any existing file extention." << std::endl;
+		return 1;
+	}
 
 	try
 	{
