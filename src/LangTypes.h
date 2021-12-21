@@ -35,7 +35,7 @@ typedef std::array<bool, 256> boolArr_t;
 typedef std::pair<const lang_t, const boolArr_t> langPair_t;
 
 template<class T, int N, class Function, class V>
-constexpr auto makeArray(Function f, V v)
+constexpr auto makeVCArray(Function f, V v)
 {
 	std::array<T, N> a {false};
   for (size_t i = 0; i < N; i++)
@@ -46,9 +46,9 @@ constexpr auto makeArray(Function f, V v)
 
 inline auto makeVCMap(void)
 {
-	constexpr auto isVowel = [](const char& letter, const sv_t& vowels) {
-		for (const auto ch : vowels)
-			if (letter == ch) return true;
+	constexpr auto isVowel = [](const char& ch, const sv_t& vowels) {
+		for (const auto vowel : vowels)
+			if (ch == vowel) return true;
 		return false;
 	};
 
