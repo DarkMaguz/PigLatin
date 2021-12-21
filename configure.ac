@@ -2,8 +2,9 @@ AC_INIT([autotools-cpp-template], [1.0])
 
 AM_INIT_AUTOMAKE([-Wall -Werror foreign])
 
-AC_PROG_CXX
-AC_PROG_CC
+AX_CXX_COMPILE_STDCXX_17
+AC_PROG_CXXCPP
+CXXFLAGS=-Wliteral-suffix
 
 PKG_CHECK_MODULES([GTEST], [gtest >= 1.10.0])
 
