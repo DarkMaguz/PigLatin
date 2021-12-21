@@ -10,15 +10,26 @@
 
 #include <fstream>
 #include <string>
+#include <string_view>
+
+#include "LangTypes.h"
 
 class PigLatin
 {
 	public:
-		PigLatin(std::string filePath);
+		PigLatin(const lt::lang_t& lang);
 		virtual ~PigLatin();
 
+		void encodeFile(const std::string& inFilePath, const std::string& outFilePath);
+
 	private:
-		std::ifstream fs;
+		std::string& obfuscateWord(std::string& word) const;
+		std::ifstream ifs;
+		std::ofstream ofs;
+
+		const lt::lang_t language;
+		inline static auto booleanVCMap = lt::makeVCMap();
 };
+
 
 #endif /* SRC_PIGLATIN_H_ */
