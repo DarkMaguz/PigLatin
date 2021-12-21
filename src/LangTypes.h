@@ -53,9 +53,11 @@ inline auto makeVCMap(void)
 	};
 
 	std::map<const lang_t, const boolArr_t> lMap = {
-			langPair_t(Danish, makeArray<bool, 256>(isVowel, VOWELS_DA)),
-			langPair_t(Sweedish, makeArray<bool, 256>(isVowel, VOWELS_SW)),
-			langPair_t(English, makeArray<bool, 256>(isVowel, VOWELS_EN))
+			langPair_t(Danish, makeVCArray<bool, 256>(isVowel, VOWELS_DA)),
+			langPair_t(Norwegian, makeVCArray<bool, 256>(isVowel, VOWELS_NO)),
+			langPair_t(Sweedish, makeVCArray<bool, 256>(isVowel, VOWELS_SW)),
+			langPair_t(English, makeVCArray<bool, 256>(isVowel, VOWELS_EN)),
+			langPair_t(Deutsch, makeVCArray<bool, 256>(isVowel, VOWELS_DE))
 	};
 	return lMap;
 }
